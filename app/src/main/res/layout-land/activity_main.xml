@@ -20,10 +20,39 @@
         android:focusableInTouchMode="false"
         android:gravity="center_horizontal"
         android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/newNumber"
+        app:layout_constraintHorizontal_bias="0.7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="131" />
+
+    <EditText
+        android:id="@+id/newNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center_horizontal"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="231.89" />
+
+    <TextView
+        android:id="@+id/operation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/button7"
+        app:layout_constraintEnd_toStartOf="@id/button7"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button0"
@@ -39,7 +68,6 @@
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:minWidth="48dp"
         android:text="1"
         app:layout_constraintStart_toStartOf="@+id/button4"
@@ -69,7 +97,6 @@
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:minWidth="48dp"
         android:text="4"
         app:layout_constraintStart_toStartOf="@+id/button7"
@@ -102,8 +129,8 @@
         android:layout_marginTop="8dp"
         android:minWidth="48dp"
         android:text="7"
-        app:layout_constraintStart_toStartOf="@+id/newNumber"
-        app:layout_constraintTop_toBottomOf="@+id/newNumber" />
+        app:layout_constraintStart_toStartOf="@+id/result"
+        app:layout_constraintTop_toBottomOf="@+id/result" />
 
     <Button
         android:id="@+id/button8"
@@ -179,40 +206,9 @@
         android:id="@+id/buttonDecimal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:minWidth="48dp"
         android:text="."
         app:layout_constraintStart_toStartOf="@+id/button1"
         app:layout_constraintTop_toBottomOf="@+id/button1" />
-
-    <EditText
-        android:id="@+id/newNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:focusable="false"
-        android:focusableInTouchMode="false"
-        android:gravity="center_horizontal"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/result"
-        tools:text="231.89" />
-
-    <TextView
-        android:id="@+id/operation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@id/newNumber"
-        app:layout_constraintEnd_toStartOf="@+id/newNumber"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
